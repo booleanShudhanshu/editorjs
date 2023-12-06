@@ -1,38 +1,88 @@
-.App {
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.mt-2 {
+  margin-top: 16px;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  background: #ddd;
+}
+
+.editor-wrapper {
+  width: 768px;
+  border: 1px solid black;
+  background: #fff;
+  padding: 1rem;
+}
+
+.editor-container {
+  width: 100%;
+  border: 1px solid green;
+  padding: 1rem;
+}
+
+.toolbar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 1fr 1fr;
+}
+
+button {
+  margin-right: 8px;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.superFancyBlockquote {
+  color: #999;
+  background: #fff;
+  font-family: "Hoefler Text", Georgia, serif;
+  font-style: italic;
+  border-left: 2px solid #999;
+  padding-left: 10px;
+}
+
+.codeBlock {
+  font-family: fira-code, monospace;
+  font-size: inherit;
+  background: #ffeff0;
+  font-style: italic;
+  word-wrap: normal;
+  word-wrap: break-word;
+  box-decoration-break: slice;
+  padding: 0.3rem 2rem;
+  border-radius: 0.2rem;
+}
+
+.leftAlign {
+  text-align: left;
+}
+.rightAlign {
+  text-align: right;
+}
+.centerAlign {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.justifyAlign {
+  text-align: justify;
 }

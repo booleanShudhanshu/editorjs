@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Quill from "./Quill";
+import DraftJs from "./draft";
+import MyEditor from "./new";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-100 ">
+      <div className="w-50 ">
+        <Quill />
+      </div>
+
+      <div className="w-50 mt-2 ">
+        <MyEditor />
+      </div>
     </div>
   );
 }
