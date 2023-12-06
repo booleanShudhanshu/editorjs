@@ -7,9 +7,9 @@ import MyEditor from "./new";
 function App() {
   return (
     <div className="w-100 ">
-      <div className="w-50 ">
+      {/* <div className="w-50 ">
         <Quill />
-      </div>
+      </div> */}
 
       <div className="w-50 mt-2 ">
         <MyEditor />
