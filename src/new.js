@@ -116,8 +116,8 @@ const DraftEditor = () => {
       const cursorRect = selectedBlockNode.getBoundingClientRect();
       const editorRect = editorContainer.getBoundingClientRect();
       console.log(cursorRect, editorRect);
-      const top = cursorRect.top - editorRect.top + editorRect.height;
-      const left = cursorRect.left - editorRect.left + editorRect.left;
+      const top = cursorRect.top - editorRect.top + window.scrollY;
+      const left = cursorRect.left - editorRect.left + window.scrollX;
       setCord({ top, left });
     }
 
@@ -219,7 +219,6 @@ const DraftEditor = () => {
   return (
     <div style={{ position: "relative" }}>
       <div className="editor-wrapper" onClick={focusEditor}>
-        <Toolbar editorState={editorState} setEditorState={setEditorState} />
         <div className="editor-container">
           <Editor
             ref={editor}
@@ -240,6 +239,7 @@ const DraftEditor = () => {
             handleBeforeInput={handleKeyPress}
           />
         </div>
+        <Toolbar editorState={editorState} setEditorState={setEditorState} />
       </div>{" "}
       {openMenu ? (
         <div
